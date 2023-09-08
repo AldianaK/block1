@@ -1,0 +1,71 @@
+"""
+Author: Aldiana Kucevic
+Date: 8-9-2023
+Afvinkopdrachten week 2 SOWP
+"""
+
+### Personal Information ###
+name = str(input("What is your name? "))
+adress = str(input("What is your adress, with city, state and ZIP? "))
+telephone_num = str(input("What is your phone number? "))
+college_major = str(input("What is your college major? "))
+
+### Sales prediction ###
+
+total_sales = int(input("What is the predicted total sales? "))
+percent = 0.23
+predicted_profit = total_sales * percent
+print("The predicted profit is ", predicted_profit)
+
+### Total purchase ###
+
+sales_tax = 1.07
+product_1 = int(input("What is the price of product 1? "))
+product_2 = int(input("What is the price of product 2? "))
+product_3 = int(input("What is the price of product 3? "))
+product_4 = int(input("What is the price of product 4? "))
+product_5 = int(input("What is the price of product 5? "))
+
+full_price_1 = product_1 * sales_tax
+full_price_2 = product_2 * sales_tax
+full_price_3 = product_3 * sales_tax
+full_price_4 = product_4 * sales_tax
+full_price_5 = product_5 * sales_tax
+
+subtotal = product_1 + product_2 + product_3 + product_4 + product_5
+total = full_price_1 + full_price_2 + full_price_3 + full_price_4 + full_price_5
+print("the subtotal is:", subtotal, "the total with tax is:", total)
+
+### Distance traveled ###
+
+speed = 70
+time = int(input("How much time have you traveled? (in hours)? "))
+distance = speed * time
+print("The distance traveled is:", distance)
+
+### Miles-per-gallon ###
+
+#MPG is een afkorting voor Miles-per-gallon
+
+miles_driven = int(input("How many miles have you driven? "))
+gas_gallon = int(input("How many gallons of gas have been used? "))
+MPG = miles_driven / gas_gallon
+print("Miles per gallon:", MPG)
+
+### Ingredient adjuster ###
+
+cookie_amount = int(input("How many cookies are you baking? "))
+
+cups_sugar = 1.5
+cups_butter = 1.0
+cups_flour = 2.75
+number_cookies = 48
+
+sugar_amount = (cookie_amount * cups_sugar)/ number_cookies
+butter_amount = (cookie_amount * cups_butter)/ number_cookies
+flour_amount = (cookie_amount * cups_flour)/ number_cookies
+
+print("You need " + str(round(sugar_amount,2)) +
+    " cups of sugar, " + str(round(butter_amount,2)) +
+    " cups of butter, and " + str(round(flour_amount,2)) +
+    " cups of flour.")
