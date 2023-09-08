@@ -1,0 +1,50 @@
+"""
+Author: Aldiana Kucevic
+Date: 8-9-2023
+function: solo weektaak 2
+"""
+
+#gebruik mrna bestand
+totaal_nucl = 0
+totaal_a = 0
+totaal_c = 0
+totaal_t = 0
+totaal_g = 0
+# open bestand
+sequentie = open("C:\\Users\\kucev\\OneDrive\\Documenten\\Bio-informatica jaar 1 2022-2024\\block 1\\BI1-Tutor\\sequenties\\arabidopsis thaliana\\Arabidopsis thaliana mRNA sequentie.txt", "r")
+for line in sequentie:
+    if ">" not in line:
+        line_total = len(line)
+        totaal_nucl += line_total
+        tel_a = line.count("A")
+        totaal_a += tel_a
+        tel_c = line.count("C")
+        totaal_c += tel_c
+        tel_g = line.count("G")
+        totaal_g += tel_g
+        tel_t = line.count("T")
+        totaal_t += tel_t
+
+"""
+om te testen of alles klopt, zet je buiten de if-statement en loop een print
+het telt nog goed.
+nu de gc berekenen
+"""
+
+print("totaal nucleotiden: ",totaal_nucl)
+print("totaal C: ",totaal_c)
+print("totaal T: ",totaal_t)
+print("totaal A: ",totaal_a)
+print("totaal G: ",totaal_g)
+GC_percent = (totaal_g + totaal_c)/totaal_nucl* 100
+rounded_gc = round(GC_percent, 1) # afronden op 1 decimaal
+print("GC percentage is: ", rounded_gc)
+
+
+
+
+
+
+
+
+
