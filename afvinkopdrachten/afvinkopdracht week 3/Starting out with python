@@ -1,0 +1,121 @@
+"""
+Author: Aldiana
+Date: 13-9-2023
+Function: afvink SOWP
+"""
+
+### Areas of rectangles ###
+
+rectangle_1_width = int(input("What is the width of rectangle 1? "))
+rectangle_1_length = int(input("What is the length of rectangle 1? "))
+rectangle_2_width = int(input("What is the width of rectangle 2? "))
+rectangle_2_length = int(input("What is the length of rectangle 2? "))
+area_rectangle_1 = rectangle_1_length * rectangle_1_width
+area_rectangle_2 = rectangle_2_length * rectangle_2_width
+
+if area_rectangle_1 > area_rectangle_2:
+    print("Rectangle 1 is greater than rectangle 2")
+elif area_rectangle_2 > area_rectangle_1:
+    print("Rectangle 2 is greater than rectangle 1")
+else:
+    print("Something went wrong, try again")
+
+### Roulette wheel colors ###
+
+pocket_num = int(input("Pick a pocket number (between 0 and 36): "))
+
+if pocket_num < 0 or pocket_num > 36:
+    print("Please select a number between 0 and 36")
+elif pocket_num == 0:
+    print("color is green")
+elif 1 <= pocket_num <= 10:
+    if pocket_num % 2 == 0:
+        print("black")
+    else:
+        print("red")
+elif 11 <= pocket_num <= 18:
+    if pocket_num % 2 == 0:
+        print("red")
+    else:
+        print("black")
+elif 19 <= pocket_num <= 28:
+    if pocket_num % 2 == 0:
+        print("black")
+    else:
+        print("red")
+elif 29 <= pocket_num <= 36:
+    if pocket_num % 2 == 0:
+        print("red")
+    else:
+        print("black")
+else:
+    print("error")
+
+### wi-fi diagnostic tree ###
+
+print("reboot the computer and try to connect.")
+
+user_answer = str(input("did that fix the problem? "))
+
+if user_answer == "y" or user_answer == "Y" or user_answer == "n" or user_answer == "N":
+    if user_answer == "N" or user_answer == "n":
+        print("reboot the router and try again")
+
+        user_answer = str(input("Did that fix the problem? "))
+        if user_answer == "y" or user_answer == "Y" or user_answer == "n" or user_answer == "N":
+            if user_answer == "N" or user_answer == "n":
+                print("Make sure the cables between the router and modem \n"
+                      "are plugged in firmly.")
+
+                user_answer = str(input("Did that fix the problem? "))
+                if user_answer == "y" or user_answer == "Y" or user_answer == "n" or user_answer == "N":
+                    if user_answer == "N" or user_answer == "n":
+                        print("Move router to a new location.")
+
+                        user_answer = str(input("Did that fix the problem? "))
+                        if user_answer == "y" or user_answer == "Y" or user_answer == "n" or user_answer == "N":
+                            if user_answer == "N" or user_answer == "n":
+                                print("Get a new router.")
+
+                        else:
+                            print("Please answer with yes (Y or y) or with \n"
+                                  "no (N or n).")
+
+                else:
+                    print("Please answer with yes (Y or y) or with \n"
+                          "no (N or n).")
+
+        else:
+            print("Please answer with yes (Y or y) or with \n"
+                  "no (N or n).")
+
+else:
+    print("Please answer with yes (Y or y) or with \n"
+          "no (N or n).")
+
+"""
+Let bij deze opdracht op de indents. er is telkens een else bij de vraag om
+y or n in te voeren.
+"""
+
+### restaurant selector ###
+
+vegetarian = str(input("Is anyone in your party a vegetarian? (yes or no) "))
+vegan = str(input("Is anyone in your party a vegan? (yes or no) "))
+gluten_free = str(input("Is anyone in your party gluten-free? (yes or no) "))
+
+if vegetarian == "yes" and vegan == "yes" and gluten_free == "yes":
+    print("Corner Cafe \nThe Chef's Kitchen")
+elif vegetarian == "yes" and vegan == "yes" and gluten_free == "no":
+    print("Corner Cafe \nThe Chef's Kitchen")
+elif vegetarian == "yes" and vegan == "no" and gluten_free == "yes":
+    print("Main Street Pizza Company")
+elif vegetarian == "no" and vegan == "yes" and gluten_free == "yes":
+    print("Corner Cafe \nThe Chef's Kitchen")
+elif vegetarian == "yes" and vegan == "no" and gluten_free == "no":
+    print("Mama's fine Italian")
+elif vegetarian == "yes" and vegan == "yes" and gluten_free == "no":
+    print("Corner Cafe \nThe Chef's Kitchen")
+# idk of er nog meer combo's zijn, maar zelfde verhaal de hele tijd
+else:
+    print("Please answer with yes or no.")
