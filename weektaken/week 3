@@ -1,0 +1,59 @@
+"""
+Author: Aldiana
+Date: 16-9-2023
+Function: weektaak 3
+"""
+
+file = input("Voer de locatie in: ")
+
+sequence = open(file, "r")
+sequence_lines = sequence.readlines()
+sequentie_sample = ''
+
+for line in sequence_lines:
+    if line[0] == ">":
+        header = line[1:].rstrip()
+        #kijkt of de line een header is en haalt het weg
+    else:
+        sequentie_sample += line.strip()
+        #als er geen > is, dan is er geen header
+
+#print(sequentie_sample)
+
+lengte_sequentie = len(sequentie_sample)
+print("totale lengte:",lengte_sequentie)
+
+amino_d = sequentie_sample.count("D")
+amino_e = sequentie_sample.count("E")
+amino_r = sequentie_sample.count("R")
+amino_k = sequentie_sample.count("K")
+print("D: ", amino_d,
+      "E: ", amino_e,
+      "R: ", amino_r,
+      "K: ", amino_k)
+
+derk_lading = ("Derk lading: ", amino_k + amino_e + amino_d + amino_r)
+
+if derk_lading == 0:
+    print("Het is een DNA sequentie")
+else:
+    print("Het is een eiwit sequentie")
+
+print("Lengte sequentie vergelijken: ")
+
+file_mrna = input("Voer de locatie in: ")
+
+sequence_mrna = open(file, "r")
+sequence_lines_mrna = sequence.readlines()
+sequentie_sample_mrna = ''
+
+for line in sequence_lines_mrna:
+    if line[0] == ">":
+        header_mrna = line[1:].rstrip()
+        #kijkt of de line een header is en haalt het weg
+    else:
+        sequentie_sample_mrna += line.strip()
+        #als er geen > is, dan is er geen header
+
+vergelijking = (len(sequentie_sample) - len(sequentie_sample_mrna))
+print("lengte verschil tussen sequenties: ", vergelijking)
