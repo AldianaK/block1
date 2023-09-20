@@ -1,0 +1,16 @@
+"""
+Author: Aldiana Kucevic
+Date: 20-9-2023
+function: SOWP opdrachten
+"""
+
+### Bug collector ###
+
+total = 0
+days = 1
+
+while days < 6:
+    count_bug = int(input("How many bugs have been collected today? "))
+    total += count_bug
+    days += 1
+    print("total collected bugs: ",total)
