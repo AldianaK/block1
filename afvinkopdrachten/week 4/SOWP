@@ -6,11 +6,54 @@ function: SOWP opdrachten
 
 ### Bug collector ###
 
-total = 0
-days = 1
 
-while days < 6:
-    count_bug = int(input("How many bugs have been collected today? "))
-    total += count_bug
-    days += 1
-    print("total collected bugs: ",total)
+# total = 0
+# days = 1
+#
+# while days < 6:
+#     count_bug = int(input("How many bugs have been collected today? "))
+#     total += count_bug
+#     days += 1
+#     print("total collected bugs: ",total)
+
+
+### Budget Analysis ###
+
+# total = 0
+# month = 0
+#
+# budget_goal = float(input("What is the budget goal for each month? "))
+#
+# while month < 12:
+#     budget_real = float(input("What are the actual expenses of this month? "))
+#     real_vs_expected = budget_goal - budget_real
+#     if budget_goal < budget_real:
+#         print("You've spent ", real_vs_expected, "more.")
+#         total += budget_real
+#         bud_continue = str(input("Do you wish to continue? (y/n) "))
+#         if bud_continue == "y":
+#             pass
+#         else:
+#             break
+#     else:
+#         print("You've spent ", real_vs_expected, "less.")
+#         total += budget_real
+#         bud_continue = str(input("Do you wish to continue? (y/n) "))
+#         if bud_continue == "y":
+#             pass
+#         else:
+#             break
+
+
+### Distance traveled ###
+
+mph_vehicle = float(input("What is the speed of the vehicle in mph? "))
+hours_traveled = int(input("How many hours has it traveled? "))
+total_distance = 0
+
+for hour in range(1, hours_traveled +1): # +1 is nodig, omdat die anders stopt bij hours traveled
+    # Het checkt op uur en berekent dan de afstand
+    distance = mph_vehicle * hour
+    total_distance += distance
+print("Distance traveled: ", total_distance)
+
