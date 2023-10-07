@@ -1,0 +1,123 @@
+"""
+Author: Aldiana Kucevic
+date: 7-10-2023
+function: moleculair gewicht berekenen van eiwit sequenties
+"""
+
+# een dictionary met gemiddelde gewicht van iedere aminozuur
+amino_weight = {"A": 71.0788, "R": 156.1875, "N": 114.1038, "D": 115.0886,
+                "C": 103.1388, "E": 129.04259, "Q": 128.1307, "G": 57.0519,
+                "H": 137.1411, "I": 113.1594, "L": 113.1594, "K": 128.1741,
+                "M": 131.1926, "F": 147.1766, "P": 97.1167, "S": 87.0782,
+                "T": 101.1051, "W": 186.02132, "Y": 163.1760, "V": 99.1326}
+
+# aminozuur counter
+totaal_A = 0
+totaal_R = 0
+totaal_N = 0
+totaal_D = 0
+totaal_C = 0
+totaal_E = 0
+totaal_Q = 0
+totaal_G = 0
+totaal_H = 0
+totaal_I = 0
+totaal_L = 0
+totaal_K = 0
+totaal_M = 0
+totaal_F = 0
+totaal_P = 0
+totaal_S = 0
+totaal_T = 0
+totaal_W = 0
+totaal_Y = 0
+totaal_V = 0
+
+with open(*bestandslocatie*) as eiwitsequentie:
+    eiwitseq = eiwitsequentie.readlines()
+    for line in eiwitseq:
+        if ">" not in line:
+            aantal_A = line.count("A")
+            totaal_A += aantal_A
+            aantal_R = line.count("R")
+            totaal_R += aantal_R
+            aantal_N = line.count("N")
+            totaal_N += aantal_N
+            aantal_D = line.count("D")
+            totaal_D += aantal_D
+            aantal_C = line.count("C")
+            totaal_C += aantal_C
+            aantal_E = line.count("E")
+            totaal_E += aantal_E
+            aantal_Q = line.count("Q")
+            totaal_Q += aantal_Q
+            aantal_G = line.count("G")
+            totaal_G += aantal_G
+            aantal_H = line.count("H")
+            totaal_H += aantal_H
+            aantal_I = line.count("I")
+            totaal_I += aantal_I
+            aantal_L = line.count("L")
+            totaal_L += aantal_L
+            aantal_K = line.count("K")
+            totaal_K += aantal_K
+            aantal_M = line.count("M")
+            totaal_M += aantal_M
+            aantal_F = line.count("F")
+            totaal_F += aantal_F
+            aantal_P = line.count("P")
+            totaal_P += aantal_P
+            aantal_S = line.count("S")
+            totaal_S += aantal_S
+            aantal_T = line.count("T")
+            totaal_T += aantal_T
+            aantal_W = line.count("W")
+            totaal_W += aantal_W
+            aantal_Y = line.count("Y")
+            totaal_Y += aantal_Y
+            aantal_V = line.count("V")
+            totaal_V += aantal_V
+
+
+    totale_lengte = (totaal_A + totaal_R + totaal_N + totaal_D + totaal_C +
+                     totaal_E + totaal_Q + totaal_G + totaal_H + totaal_I +
+                     totaal_L + totaal_K + totaal_M + totaal_F + totaal_P +
+                     totaal_S + totaal_T + totaal_W + totaal_Y +totaal_V)
+    print(totale_lengte)
+
+    totale_gewicht_A = totaal_A * amino_weight["A"]
+    totale_gewicht_R = totaal_R * amino_weight["R"]
+    totale_gewicht_N = totaal_N * amino_weight["N"]
+    totale_gewicht_D = totaal_D * amino_weight["D"]
+    totale_gewicht_C = totaal_C * amino_weight["C"]
+    totale_gewicht_E = totaal_E * amino_weight["E"]
+    totale_gewicht_Q = totaal_Q * amino_weight["Q"]
+    totale_gewicht_G = totaal_G * amino_weight["G"]
+    totale_gewicht_H = totaal_H * amino_weight["H"]
+    totale_gewicht_I = totaal_I * amino_weight["I"]
+    totale_gewicht_L = totaal_L * amino_weight["L"]
+    totale_gewicht_K = totaal_K * amino_weight["K"]
+    totale_gewicht_M = totaal_M * amino_weight["M"]
+    totale_gewicht_F = totaal_F * amino_weight["F"]
+    totale_gewicht_P = totaal_P * amino_weight["P"]
+    totale_gewicht_S = totaal_S * amino_weight["S"]
+    totale_gewicht_T = totaal_T * amino_weight["T"]
+    totale_gewicht_W = totaal_W * amino_weight["W"]
+    totale_gewicht_Y = totaal_Y * amino_weight["Y"]
+    totale_gewicht_V = totaal_V * amino_weight["V"]
+
+    totale_gewicht_sequentie = (totale_gewicht_A + totale_gewicht_R +
+                                totale_gewicht_N + totale_gewicht_D +
+                                totale_gewicht_D + totale_gewicht_C +
+                                totale_gewicht_E + totale_gewicht_Q +
+                                totale_gewicht_H + totale_gewicht_G +
+                                totale_gewicht_I + totale_gewicht_L +
+                                totale_gewicht_K + totale_gewicht_M +
+                                totale_gewicht_F + totale_gewicht_P +
+                                totale_gewicht_S + totale_gewicht_T +
+                                totale_gewicht_W + totale_gewicht_Y +
+                                totale_gewicht_V)
+
+    print("totale moleculaire gewicht van deze eiwitsequentie is: ",
+          totale_gewicht_sequentie)
+
